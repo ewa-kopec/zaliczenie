@@ -13,22 +13,21 @@ import csv
 #from typing import Iterable, Optional
 
 
-ddef display_header():
-    """A1: Displays the program title."""
-    print("\n" + "="*45)
-    print("      DISNEYLAND REVIEWS ANALYSIS SYSTEM")
-    print("="*45)
+# TUI.py - Moduł interfejsu użytkownika
+
+def display_header():
+    print("\n" + "="*40)
+    print("    DISNEYLAND REVIEWS ANALYSIS SYSTEM")
+    print("="*40)
 
 def display_main_menu():
-    """A3: Main menu options."""
     print("\n[MAIN MENU]")
     print("[A] View Data")
-    print("[B] Visualize Data")
+    print("[B] Visualise Data")
     print("[X] Exit")
     return input("Selection: ").upper()
 
 def display_sub_menu_a():
-    """A6: Sub-menu for View Data."""
     print("\n[VIEW DATA SUB-MENU]")
     print("[A] View Reviews by Park")
     print("[B] Number of Reviews by Location")
@@ -37,9 +36,11 @@ def display_sub_menu_a():
     return input("Selection: ").upper()
 
 def display_sub_menu_b():
-    """A6: Sub-menu for Visualization."""
-    print("\n[VISUALIZATION SUB-MENU]")
-    print("[A] Most Reviewed Parks (Pie Chart)")
-    print("[B] Top 10 Locations by Rating (Bar Chart)")
-    print("[C] Monthly Average Rating (Bar Chart)")
+    print("\n[VISUALISE DATA SUB-MENU]")
+    print("[A] Pie chart: Number of reviews per park")
+    print("[B] Bar chart: Top 10 locations")
+    print("[C] Bar chart: Avg rating per month")
     return input("Selection: ").upper()
+
+def confirm_choice(selection):
+    print(f"You selected option: {selection}")
